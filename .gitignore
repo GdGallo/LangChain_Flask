@@ -1,50 +1,63 @@
-# Python
-*.pyc
-*.pyo
-*.pyd
-__pycache__
-.pytest_cache
-*.db
-*.sqlite3
-*.log
-
-# Django
-*.log
-*.pot
-*.pyc
-*.pyo
-*.pyd
-__pycache__
-db.sqlite3
-media
-staticfiles
-
-# Virtualenv
+# Entorno virtual
 venv/
 env/
-ENV/
-venv.bak/
-env.bak/
+*.pyc
+*.pyo
+__pycache__/
+*.env
+
+# Archivos de configuración sensible
+config.py
+instance/
+*.key
+*.pem
+
+# Archivos de bases de datos locales
+*.db
+*.sqlite3
+
+# Archivos de compilación
+build/
+dist/
 *.egg-info/
 
-# IDEs and Text Editors
+# Archivos creados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos de herramientas de desarrollo
 .vscode/
 .idea/
-*.swp
-*~
-*.sublime-workspace
-*.sublime-project
+*.iml
 
-# MacOS
-.DS_Store
+# Docker
+*.pid
+*.sock
+.docker/
+docker-compose.override.yml
 
-# Windows
-Thumbs.db
-Desktop.ini
+# Archivos de Python que contienen dependencias
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Python Wheels
-*.whl
+# Cache de pip
+__pycache__/
+*.egg
+*.eggs
+.eggs/
+.eggs-info/
 
-# Local environment configuration
-*.env
-*.env.*
+# Archivos de Jupyter o resultados de pruebas
+.ipynb_checkpoints/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de LangChain
+*.cache/
+langchain.log
+logs/
