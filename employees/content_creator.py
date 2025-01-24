@@ -2,8 +2,7 @@ import openai
 import os
 
 # Configuración de la API de OpenAI
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
+openai.api_key = "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"
 class ContentCreator:
     def __init__(self, style="social_media"):
         self.style = style
@@ -18,17 +17,18 @@ class ContentCreator:
             prompt = f"Escribe un artículo detallado basado en el siguiente contenido: {context}"
         else:
             raise ValueError("Estilo no soportado. Usa 'social_media' o 'article'.")
-        
-        # Llamada a OpenAI para generar contenido
+
         try:
+            # Llamada a la nueva API de OpenAI
             response = openai.ChatCompletion.create(
-                model="gpt-4-0613",  # Asegúrate de usar un modelo válido como gpt-4-0613 o gpt-3.5-turbo-0613
+                model="gpt-4",
                 messages=[
                     {"role": "system", "content": "Eres un generador de contenido profesional."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=500
+                max_tokens=500,
+                temperature=0.7,
             )
-            return response['choices'][0]['message']['content'].strip()
+            return response.choices[0].message["content"].strip()
         except Exception as e:
             return f"Error al generar contenido: {e}"

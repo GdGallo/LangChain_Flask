@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oficina Virtual</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Oficina Virtual</h1>
+    <button id="extract-news-btn">Extraer Noticias</button>
+    <div id="news-container"></div>
+
+    <h2>Generar Contenido</h2>
+    <select id="content-style">
+      <option value="social_media">Redes Sociales</option>
+      <option value="article">Artículo</option>
+    </select>
+    <button id="generate-content-btn">Generar Contenido</button>
+    <div id="content-container"></div>
+
+    <button id="save-memory-btn">Guardar en Memoria</button>
+    <div id="status"></div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
